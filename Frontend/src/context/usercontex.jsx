@@ -4,7 +4,7 @@ import axios from 'axios';
 export const dataContext = createContext();
 
 function UserContext({ children }) {
-        const serverUrl = "https://crimzer.onrender.com/";
+        const serverUrl = "https://crimzer.onrender.com";
         const [currentUser, setCurrentUser] = useState(null);
 
             const fetchCurrentUser = useCallback(async () => {
