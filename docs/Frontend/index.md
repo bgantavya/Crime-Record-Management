@@ -2,41 +2,47 @@
 
 ## Folder Structure
 
-```
-.
-├── index.html
-└── src
-    └── main.jsx
-```
+*(No folder structure provided, assuming a simple project)*
 
 ## Description
 
-This project is a Crime Record Management System. It's built as a web application, indicated by the `index.html` file and references to React components via the `main.jsx` script.
+A MERN stack web application designed for reporting and managing crime records. It features two user roles: user and police.
 
 ## How to Use
 
-1.  **Installation:** The specific installation steps are not available from the `index.html` file. It's implied this is a React application using Vite as a build tool, so you may need to install node packages and run `npm install` and `npm run dev` or `npm start`
-2.  **Usage:** Access the application through your web browser after starting the development server. The main application logic will be loaded from `/src/main.jsx`.
+1.  **Installation:**
+
+    *   Clone the repository (not provided).
+    *   Navigate to the project directory.
+    *   Install dependencies (not provided, likely using npm or yarn).
+    *   Set up environment variables (not provided).
+
+2.  **Running the Application:**
+
+    *   Start the development server (not provided, likely `npm start` or similar).
+    *   Access the application in your web browser.
 
 ## Technologies Used
 
 *   HTML
-*   JavaScript (likely React, given the file extension `.jsx`)
-*   Vite (implied, from `/vite.svg`)
+*   JavaScript (JSX)
+*   Vite
+*   React (inferred from `main.jsx`)
+*   MERN Stack (MongoDB, Express.js, React, Node.js - Inferred from description)
 
 ## Architecture or Code Overview
 
-The `index.html` file serves as the entry point for the web application. It includes:
-
-*   Metadata including the title "Crime-Record-Management-System"
-*   A root element `<div id="root"></div>` where the React application will be rendered.
-*   A script tag that imports `/src/main.jsx`, the likely entry point for the React application.
+The application utilizes a MERN stack. The `index.html` file serves as the entry point, loading the React application. The `main.jsx` file (not provided) likely handles the application's core logic and rendering of components. The application has user and police roles.
 
 ## Known Issues / Improvements
 
-*   The project description is limited.
-*   Further details about the components, data flow, and database are unavailable in the provided `index.html` file.
+*   Complete implementation of MERN backend and frontend logic (not provided).
+*   Implement user authentication and authorization.
+*   Develop database schema for storing crime records.
+*   UI/UX enhancements.
 
 ## Additional Notes or References
 
-The project leverages React (implied by `.jsx` extension) and likely uses Vite. More details can be found in the `/src/main.jsx` file.
+*   Based on the provided information, the project is under development.
+*   This README is based on the limited information.
+*   Authors: Gantavya Bansal

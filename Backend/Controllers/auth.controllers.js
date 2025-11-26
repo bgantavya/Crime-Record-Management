@@ -14,7 +14,7 @@ export const signUp=async (req, res) => {
             return res.status(400).json({message:"All fields are required"});   
         }
         // Prevent signup as police via public signup endpoint
-        const POLICE_ID = process.env.POLICE_ID || '2315001656';
+        const POLICE_ID = process.env.POLICE_ID;
         if (
             username === POLICE_ID ||
             email === POLICE_ID ||
@@ -70,7 +70,7 @@ export const login = async (req, res) => {
             return res.status(400).json({ message: "Username/Email and password are required" });
         }
         // Special-case: police login with fixed credentials (no signup)
-        const POLICE_ID = process.env.POLICE_ID || '2315001656';
+        const POLICE_ID = process.env.POLICE_ID || '';
         const POLICE_PWD = process.env.POLICE_PWD || 'gla-police';
 
         if ((username && username.toString() === POLICE_ID) || (email && email.toString() === POLICE_ID)) {

@@ -1,6 +1,6 @@
-# My Project
+# Crime Master
 
-**Folder Structure:**
+## Folder Structure
 
 ```
 ├── auth.controllers.js
@@ -8,28 +8,35 @@
 └── user.controllers.js
 ```
 
-**Description:**
+## Description
 
-This project comprises controller modules for authentication, crime-related operations, and user management.
+This project is a MERN-based web application designed for reporting and managing crime records, supporting two roles: user and police.
 
-**How to Use:**
+## How to Use
 
-(Usage instructions would be here if individual controller documentation was provided)
+This section describes the usage of the controllers. Specific usage instructions will be added here based on the functionality implemented within each controller file.
 
-**Technologies Used:**
+## Technologies Used
 
-*   (Technologies used would be listed here if individual controller documentation was provided)
+*   MERN Stack (MongoDB, Express.js, React, Node.js)
+*   JavaScript
 
-**Architecture or Code Overview:**
+## Architecture or Code Overview
 
-*   `auth.controllers.js`: (Description of authentication controller logic would be here)
-*   `crime.controllers.js`: (Description of crime controller logic would be here)
-*   `user.controllers.js`: (Description of user controller logic would be here)
+The project is structured with individual controller files for managing different aspects of the application.
 
-**Known Issues / Improvements:**
+*   `auth.controllers.js`: Handles authentication-related logic.
+*   `crime.controllers.js`: Manages crime record creation, retrieval, and updates.
+*   `user.controllers.js`: Manages user-related operations and data.
 
-*   (Known issues and potential improvements would be listed here if individual controller documentation was provided)
+## Known Issues / Improvements
 
-**Additional Notes or References:**
+This section will list any current limitations or areas needing improvement.
 
-*   (Any relevant licensing, credits, or related tools would be listed here)
+*   Detailed functionality needs to be implemented within each controller file.
+*   Add security measures to protect against various attacks.
+
+## Additional Notes or References
+
+*   **Authors:** Gantavya Bansal
+*   **Keywords:** MERN, crime, webapp, user, police.

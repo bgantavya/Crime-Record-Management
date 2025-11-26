@@ -1,4 +1,4 @@
-# My Project
+# Crime Master
 
 ## Folder Structure
 
@@ -9,30 +9,41 @@
 
 ## Description
 
-This project defines two models: `User` and `Crime`.
+This project is a MERN (MongoDB, Express.js, React, Node.js) based web application designed for reporting and managing crime records. It features two user roles: user and police.
 
 ## How to Use
 
-The project defines data models and doesn't have a direct user interface.  These models are intended to be used in conjunction with a database and application logic.
+This section will be populated once the application code is available. It will include instructions on:
+
+*   **Installation:**  Instructions for setting up the development environment, including installing dependencies.
+*   **Running the Application:**  Commands for starting the frontend and backend servers.
+*   **API Usage:**  Examples of how to interact with the API endpoints (if applicable).
 
 ## Technologies Used
 
-*   JavaScript
+*   **Frontend:** React
+*   **Backend:** Node.js, Express.js
+*   **Database:** MongoDB
+*   **Other:**  (To be populated based on dependencies)
 
 ## Architecture or Code Overview
 
-The project comprises two JavaScript files:
+This section will provide details about the application's key components and their interactions, including:
 
-*   `crime.model.js`: Defines the `Crime` model.  (Implementation details are unavailable)
-*   `user.model.js`: Defines the `User` model. (Implementation details are unavailable)
+*   **User Roles:** User and Police
+*   **Models:**
+    *   `crime.model.js`:  (Details to be provided from the contents of the file)
+    *   `user.model.js`: (Details to be provided from the contents of the file)
+*   **API Endpoints:** (To be documented once the API is defined)
 
 ## Known Issues / Improvements
 
-*   Implementations for the `Crime` and `User` models are required.
-*   Add database integration.
+*   (To be populated with current limitations and planned improvements)
+*   Authentication and Authorization implementation.
 *   Implement data validation.
+*   User interface design and responsiveness.
 
 ## Additional Notes or References
 
-*   Authors: Anonymous
-*   Keywords:  (None provided)
+*   **Authors:** Gantavya Bansal
+*   **Keywords:** MERN, crime reporting, web application

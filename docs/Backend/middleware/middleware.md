@@ -1,65 +1,63 @@
-# Authentication Middleware
+# Crime Master - Auth Middleware
 
 ## Folder Structure
 
 ```
-.
-└── auth.middleware.js
+├── auth.middleware.js
 ```
 
 ## Description
 
-This project provides an authentication middleware for use in Node.js applications, specifically designed to verify JWT (JSON Web Tokens).
+This middleware provides authentication functionalities for the Crime Master web application. It is designed to verify user authentication before allowing access to protected resources.
 
 ## How to Use
 
-1.  **Installation:**
+The middleware can be integrated into your MERN stack application's routing to protect specific routes.
 
-    ```bash
-    npm install jsonwebtoken
-    ```
+Example usage (Node.js/Express):
 
-2.  **Usage Example:**
+```javascript
+const express = require('express');
+const { authenticateToken } = require('./auth.middleware'); // Assuming auth.middleware.js is in the same directory
+const app = express();
 
-    ```javascript
-    const jwt = require('jsonwebtoken');
+app.get('/protectedRoute', authenticateToken, (req, res) => {
+  // Access to this route is only granted if the user is authenticated.
+  res.json({ message: 'Access granted!' });
+});
+```
 
-    function authenticateToken(req, res, next) {
-      const authHeader = req.headers['authorization'];
-      const token = authHeader && authHeader.split(' ')[1];
+The `authenticateToken` function is expected to:
 
-      if (token == null) return res.sendStatus(401);
-
-      jwt.verify(token, process.env.TOKEN_SECRET, (err, user) => {
-        if (err) return res.sendStatus(403);
-        req.user = user;
-        next();
-      });
-    }
-
-    // Example route using the middleware
-    app.get('/protected', authenticateToken, (req, res) => {
-      res.json({ message: 'Authorized!' });
-    });
-    ```
+1.  Extract the token from the request headers (e.g., Authorization header).
+2.  Verify the token's validity (e.g., using JWT verification).
+3.  If valid, attach the user's information to the `req` object (e.g., `req.user`).
+4.  Call `next()` to proceed to the route handler.
+5.  If invalid or missing, return an appropriate error response (e.g., 401 Unauthorized).
 
 ## Technologies Used
 
 *   Node.js
-*   jsonwebtoken
+*   Express.js
+*   JWT (JSON Web Tokens) - Used for token generation and verification
 
 ## Architecture or Code Overview
 
-The `auth.middleware.js` file contains a single function: `authenticateToken`. This function is designed to be used as middleware. It extracts the JWT from the `Authorization` header, verifies the token using `jsonwebtoken.verify`, and attaches the decoded user information to the request object if the token is valid. If the token is invalid or missing, it returns the appropriate HTTP status codes (401 Unauthorized or 403 Forbidden).
+The `auth.middleware.js` file likely contains a function (`authenticateToken` in the example) that performs the following steps:
+
+1.  **Token Extraction**: Retrieves the authentication token from the request headers.
+2.  **Token Verification**: Validates the token's signature, expiry, and other claims, typically using a library like `jsonwebtoken`.
+3.  **User Identification**:  If the token is valid, it decodes the token to retrieve user information (e.g., user ID, roles).
+4.  **Request Enrichment**: Attaches the user information to the request object, making it accessible to subsequent route handlers (e.g., `req.user`).
+5.  **Authorization**: Based on user roles or permissions, access to specific resources can be granted or denied within the route handlers.
 
 ## Known Issues / Improvements
 
-*   Error handling for token verification failures could be more specific.
-*   Consider adding support for other authentication methods.
-*   Implement token refresh functionality.
+*   Implement proper error handling for invalid or expired tokens.
+*   Add role-based authorization for finer-grained access control.
+*   Consider implementing token refresh functionality.
 
 ## Additional Notes or References
 
-*   This middleware assumes a token is sent in the `Authorization` header in the format `Bearer <token>`.
-*   Requires the `process.env.TOKEN_SECRET` environment variable to be set.
-*   Based on the official [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) documentation.
+*   **Authors**: Gantavya Bansal
+*   **Keywords**: MERN, webapp, crime, user, police

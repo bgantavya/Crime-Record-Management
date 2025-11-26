@@ -1,70 +1,81 @@
-# Crime Record Management
+# Crime Master
 
-**Folder Structure**
+## Folder Structure
 
-*   **index.js** (Entry point)
-*   **Config/**
-    *   **db.js** (Database configuration)
-*   **Routes/**
-    *   **auth.routes.js** (Authentication routes)
-    *   **crime.routes.js** (Crime related routes)
-*   **Backend/uploads/** (Static folder for file uploads)
+```
+├── Backend
+│   ├── Config
+│   │   └── db.js
+│   ├── Routes
+│   │   ├── auth.routes.js
+│   │   └── crime.routes.js
+│   ├── uploads
+│   ├── index.js
+│   └── ...
+└── ...
+```
 
-**Description**
+## Description
 
-A backend application for managing crime records. It provides API endpoints for authentication and managing crime-related data.
+A MERN (MongoDB, Express.js, React, Node.js) web application for reporting and managing crime records. It features two user roles: User and Police.
 
-**How to Use**
+## How to Use
 
 1.  **Installation:**
 
-    ```bash
-    npm install
-    ```
+    *   Clone the repository.
+    *   Navigate to the backend directory `cd Backend`.
+    *   Run `npm install` to install the dependencies.
+    *   Set up a `.env` file with the following variables:
+        *   `MONGO_URI`: Your MongoDB connection string.
+        *   `PORT`: The port on which the server will run (e.g., `8000`).
+        *   `JWT_SECRET`: A secret key for JWT authentication.
+        *   `COOKIE_SECRET`: A secret key for cookie encryption.
+        *   `CLOUDINARY_CLOUD_NAME`: Cloudinary cloud name.
+        *   `CLOUDINARY_API_KEY`: Cloudinary API key.
+        *   `CLOUDINARY_API_SECRET`: Cloudinary API secret.
+    *   Run `node index.js` or `npm start` to start the server.
 
-2.  **Configuration:**
+2.  **API Usage:**
 
-    *   Create a `.env` file in the root directory.
-    *   Set environment variables: `PORT`, `MONGO_URI`.
+    *   The backend exposes the following API endpoints:
+        *   `/api/register`: User registration.
+        *   `/api/login`: User login.
+        *   `/api/logout`: User logout.
+        *   `/api/crime`: Crime-related endpoints (CRUD operations).
+    *   Use a tool like Postman or Insomnia to interact with the API endpoints.
 
-3.  **Run the application:**
+## Technologies Used
 
-    ```bash
-    npm start
-    ```
+*   **Node.js:** JavaScript runtime environment.
+*   **Express.js:** Web application framework.
+*   **MongoDB:** NoSQL database.
+*   **Mongoose:** MongoDB object modeling tool.
+*   **dotenv:** For loading environment variables.
+*   **cookie-parser:** Middleware for parsing cookies.
+*   **cors:** Middleware for enabling CORS.
+*   **JWT:** For authentication.
+*   **Cloudinary:** For file upload (Images, Videos).
 
-    The server will start on the port specified in your `.env` file (defaults to 8000).
+## Architecture or Code Overview
 
-**Technologies Used**
+*   **`index.js`**: Main entry point, sets up the Express application, middleware, and routes.
+*   **`Config/db.js`**: Connects to the MongoDB database.
+*   **`Routes/auth.routes.js`**: Handles authentication-related routes (register, login, logout).
+*   **`Routes/crime.routes.js`**: Handles crime record-related routes (CRUD operations).
+*   **Middleware**: Uses `express.json()`, `cookieparser()`, and `cors()` for request parsing and cross-origin resource sharing.
+*   **CORS**: Configured to allow requests from `https://crime-record-management-4.onrender.com`.
 
-*   Node.js
-*   Express.js
-*   dotenv
-*   Mongoose (Implied)
-*   cookie-parser
-*   cors
+## Known Issues / Improvements
 
-**Architecture or Code Overview**
+*   Implement proper error handling throughout the application.
+*   Add input validation to all API endpoints.
+*   Implement user roles and permissions for access control.
+*   Improve database schema design for better efficiency and scalability.
+*   Implement frontend.
 
-*   **index.js**:
-    *   Initializes Express application.
-    *   Loads environment variables using `dotenv`.
-    *   Connects to the database using `connectdb()`.
-    *   Sets up middleware: `express.json()`, `cookieparser()`, `cors()`.
-    *   Defines routes: Authentication (`/api`), Crime management (`/api/crime`).
-    *   Serves static files for uploaded evidence.
-    *   Starts the server.
-*   **Routes**: Defines API endpoints for authentication and crime-related operations (CRUD).
-*   **Config/db.js**: Handles database connection.
+## Additional Notes or References
 
-**Known Issues / Improvements**
-
-*   Implement proper error handling and logging.
-*   Add input validation for all API endpoints.
-*   Implement user authentication and authorization.
-*   Add documentation for the API (Swagger/OpenAPI).
-*   Add tests.
-
-**Additional Notes or References**
-
-*   This project is configured to allow CORS requests from `https://crime-record-management-4.onrender.com`.
+*   This project is a MERN stack application.
+*   Uses Cloudinary for file uploads.
+*   The backend is configured to serve static files from the `uploads` directory.

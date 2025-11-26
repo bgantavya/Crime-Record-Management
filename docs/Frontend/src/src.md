@@ -1,4 +1,4 @@
-# My Project
+# Crime Master
 
 ## Folder Structure
 
@@ -23,40 +23,47 @@
 
 ## Description
 
-This project appears to be a React-based web application with user authentication and various dashboard views.
+A MERN-based web application designed for reporting and managing crime records. It features two user roles: User and Police.
 
 ## How to Use
 
 1.  **Installation:**
 
-    No installation instructions are provided in the source code. Likely, this is a standard React project, and you can install dependencies using `npm install` or `yarn install`.
+    *   Clone the repository.
+    *   Navigate to the project directory.
+    *   Run `npm install` or `yarn install` to install dependencies.
 2.  **Running the Application:**
 
-    Start the development server using `npm start` or `yarn start`.
-3.  **Usage:**
-
-    Navigate to the application URL (usually `http://localhost:3000`) in your web browser.
+    *   Run `npm start` or `yarn start` to start the development server.
+    *   Open your browser and navigate to `http://localhost:3000` (or the port specified by the development server).
 
 ## Technologies Used
 
 *   React
-*   JavaScript (JSX)
+*   Node.js
+*   Express.js
+*   MongoDB
+*   JavaScript
+*   HTML
+*   CSS
 
 ## Architecture or Code Overview
 
-*   **`App.jsx`**: The main application component, likely responsible for routing and overall layout.
-*   **`main.jsx`**: Entry point of the React application, likely rendering the `App` component.
-*   **`Pages`**: Contains various page components, including:
-    *   **`Auth`**: Contains login and signup components.
-    *   **`Dashboard`**: Contains various dashboard components for different user roles.
-*   **`context`**: Contains `usercontex.jsx`, which manages user-related states and context.
+*   **`App.jsx`**: Main application component, manages routing.
+*   **`main.jsx`**: Entry point of the React application, renders the `App` component.
+*   **`Pages/Auth/Login.jsx`**: Handles user login functionality.
+*   **`Pages/Auth/SignUp.jsx`**: Handles user registration functionality.
+*   **`Pages/Dashboard/*`**: Components for different dashboard views (MyCases, ReportCrime, etc.).
+*   **`context/usercontex.jsx`**: Manages user authentication state.
 
 ## Known Issues / Improvements
 
-*   No specific known issues are listed.
+*   Implement database integration.
+*   Implement backend API endpoints.
+*   Implement robust user authentication and authorization.
+*   Improve UI design and responsiveness.
 
 ## Additional Notes or References
 
-*   The project structure suggests a multi-page web application.
-*   Further details might be available in the source code of the `App.jsx`, `main.jsx` and the context file.
-*   The absence of description, authors, and keywords suggests this is initial documentation.
+*   **Authors:** Gantavya Bansal
+*   **Keywords:** MERN, crime reporting, web application

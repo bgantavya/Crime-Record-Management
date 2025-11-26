@@ -1,4 +1,4 @@
-# Police Dashboard
+# Crime Master - Dashboard
 
 ## Folder Structure
 
@@ -14,46 +14,36 @@
 
 ## Description
 
-This project appears to be a dashboard application, likely for use by law enforcement, providing various functionalities such as managing cases, reporting crimes, accessing resources, and user settings. The specific features will depend on the implementation of each component.
+This project is a MERN-based web application designed to report and manage crime records, featuring two distinct user roles: User and Police. This specific documentation outlines the dashboard components.
 
 ## How to Use
 
-The application is likely a React-based web application. To use it:
+The application utilizes React components and requires a backend (not detailed here). Each `.jsx` file corresponds to a specific part of the dashboard:
 
-1.  **Installation:** The project likely requires Node.js and npm or yarn. Run `npm install` (or `yarn install`) in the project directory to install dependencies.
-2.  **Running the application:** Start the development server using `npm start` (or `yarn start`).
-3.  **Accessing the application:** Open your web browser and navigate to the address provided by the development server (usually `http://localhost:3000`).
-
-Specific functionalities depend on the implementation of each component.
+*   **Messages.jsx:** Manages message functionality.
+*   **MyCases.jsx:** Displays the user's cases.
+*   **PoliceDashboard.jsx:** Provides the police dashboard overview.
+*   **ReportCrime.jsx:** Allows users to report crimes.
+*   **Resources.jsx:** Contains resources and information.
+*   **Settings.jsx:** Manages user settings.
+*   **UserDashboard.jsx:** Serves as the user's primary dashboard.
 
 ## Technologies Used
 
 *   React
-*   JavaScript
-*   Potentially CSS/SCSS for styling
-*   Potentially a state management library (e.g., Redux, Zustand, Context API)
-*   Potentially a routing library (e.g., React Router)
+*   MERN stack (MongoDB, Express.js, React, Node.js) - Backend details not covered here.
 
 ## Architecture or Code Overview
 
-The application is composed of several React components, each responsible for a specific aspect of the dashboard:
-
-*   **Messages.jsx:** Handles message-related functionalities.
-*   **MyCases.jsx:** Manages cases.
-*   **PoliceDashboard.jsx:** Likely the main dashboard view for police users.
-*   **ReportCrime.jsx:** Enables crime reporting.
-*   **Resources.jsx:** Provides access to relevant resources.
-*   **Settings.jsx:** Manages user settings.
-*   **UserDashboard.jsx:** The user dashboard.
-
-Each component likely imports and renders other components or uses external libraries.
+The application is structured with separate components for different dashboard features. Each `.jsx` file represents a React component responsible for a particular aspect of the dashboard. The overall flow relies on the MERN stack for data management and rendering.
 
 ## Known Issues / Improvements
 
-*   Detailed functionality and features of each component are currently unknown.
-*   Further documentation is required for detailed usage.
-*   Add more features to each component.
+*   Component-specific detailed documentation is missing; it only states purpose.
+*   Backend integration and data flow are not covered.
 
 ## Additional Notes or References
 
-This project is a starting point, and the specific functionality will depend on the implementation of each component.
+*   **Author:** Gantavya Bansal
+*   This documentation focuses solely on dashboard component overview.
+*   **Keywords:** Crime Reporting, MERN, React

@@ -1,61 +1,56 @@
-# My Project
+# Crime Master
 
 ## Folder Structure
 
 ```
-├── public
-│   └── index.html
-├── src
-│   ├── App.jsx
-│   ├── context
-│   │   └── usercontex.jsx
-│   ├── index.css
-│   └── main.jsx
-├── package.json
-└── README.md
+├── README.md
+├── index.css
+├── App.jsx
+├── context/
+│   └── usercontex.jsx
+└── main.jsx
 ```
 
 ## Description
 
-This project is a React application. It uses React Router for navigation and a UserContext for managing user-related data. The application's main component is rendered within a BrowserRouter and utilizes the UserContext to provide context to its children.
+A MERN stack web application designed for reporting and managing crime records. It features two user roles: user and police.
 
 ## How to Use
 
 1.  **Installation:**
 
-    *   Ensure you have Node.js and npm or yarn installed.
+    *   Ensure you have Node.js and npm installed.
     *   Navigate to the project directory in your terminal.
-    *   Run `npm install` or `yarn install` to install dependencies.
+    *   Run `npm install` to install dependencies.
 
 2.  **Running the Application:**
 
-    *   Run `npm start` or `yarn start` to start the development server.
-    *   The application should open in your default browser at `http://localhost:3000`.
+    *   Run `npm start` to start the development server.
+    *   Open your web browser and go to `http://localhost:3000` (or the port specified by your development server).
 
 ## Technologies Used
 
 *   React
-*   React DOM
-*   React Router DOM
-*   JavaScript (JSX)
-*   npm or Yarn
+*   React Router
+*   JavaScript (ES6+)
+*   HTML
+*   CSS
 
 ## Architecture or Code Overview
 
-*   **`main.jsx`**: This is the entry point of the React application. It uses `createRoot` to render the `App` component into the DOM. It wraps the `App` component within a `BrowserRouter` for routing and a `UserContext` provider for managing user context.
-*   **`App.jsx`**: (Implied, not in the provided code) This is the main application component, likely responsible for rendering the primary UI and managing application state.
-*   **`index.css`**: (Implied, not in the provided code) This file contains the CSS styles for the application.
-*   **`usercontex.jsx`**: This file contains the UserContext provider, enabling the sharing of user-related data across the application.
-*   **`BrowserRouter`**: Provides routing capabilities.
+The application utilizes React for the user interface.
+
+*   `main.jsx`: Entry point for the React application, rendering the `App` component within a `BrowserRouter` and `UserContext`.
+*   `App.jsx`: The main application component, likely handling routing and overall structure.
+*   `usercontex.jsx`: Manages user-related context (authentication, roles, etc.).
 
 ## Known Issues / Improvements
 
-*   No specific issues or improvements are identified in the provided context.
-*   The project description is limited. A more detailed description could be included.
-*   Further details on the functionality of the App component is needed.
-*   Detailed API or CLI usage documentation is not provided as the project is a React application and not a command-line tool.
+*   Implement the backend (MERN stack).
+*   Add proper user authentication and authorization.
+*   Implement data fetching and storage.
+*   Improve styling and user experience.
 
 ## Additional Notes or References
 
-*   This project structure is based on a standard React application setup.
-*   For more information on React, React Router, and context, refer to their respective documentation.
+*   This project is developed by Gantavya Bansal.

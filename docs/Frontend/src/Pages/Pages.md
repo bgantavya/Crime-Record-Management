@@ -1,4 +1,4 @@
-# My Project
+# Crime Master - React Pages
 
 ## Folder Structure
 
@@ -18,25 +18,42 @@
 
 ## Description
 
-This project provides the components for user authentication and different dashboard views.
+This project is a React-based web application for reporting and managing crime records, designed for two user roles: user and police.
 
 ## How to Use
 
-No specific usage instructions available as it is a component-based project. Individual components can be imported and used within a React application.
+To run this application, you will need a React development environment setup.
+
+1.  **Installation**: Follow the instructions for your React-based project (e.g., using `npm` or `yarn` for package management and build tools).
+2.  **Running the Application**: Run the development server (e.g., `npm start` or `yarn start`).
+3.  **Authentication**: Navigate to the `/Auth` routes for login and signup functionality.
+4.  **Dashboard Access**: Once authenticated, users and police officers can access different dashboards and features like reporting crimes, viewing cases, and accessing resources from the `/Dashboard` directory based on their roles.
 
 ## Technologies Used
 
 *   React
-*   JSX
+*   [Other relevant technologies used in the complete MERN stack application, such as Node.js, Express.js, MongoDB]
 
 ## Architecture or Code Overview
 
-The project is structured with two main folders: `Auth` for authentication-related components (Login, SignUp) and `Dashboard` which includes various dashboard views like Messages, MyCases, PoliceDashboard, ReportCrime, Resources, Settings, and UserDashboard.
+*   **Auth**: Contains components for user authentication, including `Login.jsx` and `SignUp.jsx`.
+*   **Dashboard**: Contains components for the main application functionalities, including different dashboards:
+    *   `Messages.jsx`: Messages section.
+    *   `MyCases.jsx`: Displays user's cases.
+    *   `PoliceDashboard.jsx`: Police officer dashboard.
+    *   `ReportCrime.jsx`: Crime reporting form.
+    *   `Resources.jsx`: Resource access section.
+    *   `Settings.jsx`: User settings.
+    *   `UserDashboard.jsx`: User-specific dashboard.
 
 ## Known Issues / Improvements
 
-*   No specific details available.
+*   [List of current known issues and areas for improvement, like incomplete features or UI enhancements.]
+*   Implement role-based access control.
+*   Implement data storage and retrieval using backend API calls
 
 ## Additional Notes or References
 
-*   No specific licensing or credits available.
+*   **Authors**: Gantavya Bansal
+*   **Keywords**: MERN, webapp, crime reporting
+*   [Mention any license information, if applicable]

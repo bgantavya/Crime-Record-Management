@@ -1,4 +1,4 @@
-# BackendCode
+# Crime Master - Backend
 
 ## Folder Structure
 
@@ -18,43 +18,53 @@
 
 ## Description
 
-This project appears to be a backend application, likely for managing user authentication, crime data, and user-related functionalities.
+The backend for Crime Master, a MERN-based web application designed for crime record reporting and management. It supports two roles: User and Police.
 
 ## How to Use
 
-The provided information is insufficient to determine specific usage instructions.  Further documentation within each file or folder may provide the usage details.
+1.  **Installation:**
+
+    *   Clone the repository.
+    *   Navigate to the project directory.
+    *   Install dependencies using `npm install`.
+
+2.  **Running the Application:**
+
+    *   Start the server using `node index.js`.
+
+3.  **API Usage:**
+
+    *   API endpoints are available for user authentication, crime reporting, and crime record management.
 
 ## Technologies Used
 
-Based on the structure, the project likely uses:
-
 *   Node.js
-*   Likely a web framework like Express.js (inferred)
-*   Database (implied by `models` folder)
-*   JavaScript
+*   Express.js
+*   MongoDB
+*   Mongoose
+*   (Additional technologies inferred from code: JWT, bcrypt)
 
 ## Architecture or Code Overview
 
-The project is structured with common backend patterns:
-
-*   **Controllers:**  Handle incoming requests and business logic.
-    *   `auth.controllers.js`:  Manages authentication related actions.
-    *   `crime.controllers.js`: Manages actions related to crime data.
-    *   `user.controllers.js`: Manages user-related actions.
-*   **Middleware:**  Acts as an intermediary layer, often for authentication or request handling.
-    *   `auth.middleware.js`: Handles authentication middleware.
-*   **Models:** Define the data structure and interaction with a database.
-    *   `crime.model.js`:  Defines the schema and operations for crime data.
-    *   `user.model.js`: Defines the schema and operations for user data.
-*   **public:**  Likely contains static assets.
-*   **index.js:** Likely the entry point of the application.
+*   **Controllers:** Handle incoming requests and interact with the models.
+    *   `auth.controllers.js`: Manages user authentication (login, signup).
+    *   `crime.controllers.js`: Handles crime record creation, retrieval, and updates.
+    *   `user.controllers.js`: Manages user-related operations.
+*   **Middleware:**  Acts as an intermediary between requests and the application, e.g. authentication.
+    *   `auth.middleware.js`:  Authenticates users.
+*   **Models:** Define the structure and schema for data storage in MongoDB.
+    *   `crime.model.js`: Defines the schema for crime records.
+    *   `user.model.js`: Defines the schema for user data.
+*   `index.js`:  Entry point of the application, sets up the server, connects to the database, and defines routes.
 
 ## Known Issues / Improvements
 
-*   No specific known issues are listed.
-*   Further documentation is required for detailed functionality and usage.
+*   Implement proper error handling throughout the application.
+*   Add comprehensive unit and integration tests.
+*   Enhance security measures (e.g., input validation, rate limiting).
+*   Implement data validation.
+*   Add more features like role-based access control.
 
 ## Additional Notes or References
 
-*   The project description is limited.
-*   No license or credits are provided.
+*   Authors: Gantavya Bansal
