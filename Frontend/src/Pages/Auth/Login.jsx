@@ -62,7 +62,7 @@ const Login = () => {
   const fillDemoUser = () => {
     setLoginAs('user');
     setUseEmail(false);
-    setUsername('demo_user');
+    setUsername('gantavya');
     setEmail('');
     setPassword('demo123');
   }
@@ -175,7 +175,7 @@ const Login = () => {
                     id="officerId"
                     name="officerId"
                     type="text"
-                    value={'2315001656'}
+                    value={'2315000820'}
                     readOnly
                     className="w-full px-4 py-3 bg-gray-700 border border-red-600 rounded-lg shadow-sm text-white font-mono text-center font-bold cursor-not-allowed"
                   />

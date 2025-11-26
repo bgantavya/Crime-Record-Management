@@ -13,7 +13,7 @@ export const authenticate = async (req, res, next) => {
 
     // If token was created for fake police id we may not have a DB user
     if (payload.id === 'police-officer') {
-      req.user = { username: process.env.POLICE_ID || '2315001656', role: 'police' };
+      req.user = { username: process.env.POLICE_ID || '', role: 'police' };
       return next();
     }
 

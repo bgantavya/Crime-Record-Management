@@ -23,6 +23,7 @@ const allowedOrigins = process.env.CLIENT_URL
 const isProduction = process.env.NODE_ENV === 'production';
 
 app.use(cors({
+<<<<<<< HEAD
     origin: function (origin, callback) {
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
@@ -36,6 +37,9 @@ app.use(cors({
             callback(new Error('Not allowed by CORS'));
         }
     },
+=======
+    origin: "https://crime-master.onrender.com",
+>>>>>>> main
     credentials: true
 }));
 
