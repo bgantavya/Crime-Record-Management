@@ -71,9 +71,9 @@ const UserDashboard = () => {
             <div className="flex items-center space-x-4">
               <div className="text-right">
                 <p className="text-white font-semibold">
-                  Welcome, {(currentUser?.username === '2315001656' || currentUser?.firstname === '2315001656')
-                      ? '2315000820' : currentUser?.username || currentUser?.firstname || 'User'}
-                </p>                <p className="text-gray-400 text-sm">Citizen Account</p>
+                  Welcome, {currentUser?.username || currentUser?.firstname || 'Gantavya'}
+                </p>               
+               <p className="text-gray-400 text-sm">Citizen Account</p>
               </div>
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-semibold">{(currentUser?.username || currentUser?.firstname || 'U').charAt(0)}</span>
