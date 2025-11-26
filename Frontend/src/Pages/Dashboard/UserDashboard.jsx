@@ -33,7 +33,7 @@ const UserDashboard = () => {
   };
 
   const renderTabContent = () => {
-    switch(activeTab) {
+    switch (activeTab) {
       case 'overview':
         return <OverviewTab data={dashboardData} />;
       case 'reports':
@@ -70,8 +70,10 @@ const UserDashboard = () => {
             </div>
             <div className="flex items-center space-x-4">
               <div className="text-right">
-                <p className="text-white font-semibold">Welcome, {currentUser?.username || currentUser?.firstname || 'User'}</p>
-                <p className="text-gray-400 text-sm">Citizen Account</p>
+                <p className="text-white font-semibold">
+                  Welcome, {(currentUser?.username === '2315001656' || currentUser?.firstname === '2315001656')
+                      ? '2315000820' : currentUser?.username || currentUser?.firstname || 'User'}
+                </p>                <p className="text-gray-400 text-sm">Citizen Account</p>
               </div>
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-semibold">{(currentUser?.username || currentUser?.firstname || 'U').charAt(0)}</span>
@@ -230,11 +232,10 @@ const OverviewTab = ({ data }) => (
             <div key={caseItem.id} className="p-4 bg-gray-600/30 rounded-lg border border-gray-500">
               <div className="flex justify-between items-start mb-2">
                 <h4 className="font-semibold text-white">{caseItem.title}</h4>
-                <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                  caseItem.status === 'investigating' ? 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30' :
-                  caseItem.status === 'pending' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
-                  'bg-red-500/20 text-red-300 border border-red-500/30'
-                }`}>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${caseItem.status === 'investigating' ? 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30' :
+                    caseItem.status === 'pending' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
+                      'bg-red-500/20 text-red-300 border border-red-500/30'
+                  }`}>
                   {caseItem.status.replace('_', ' ')}
                 </span>
               </div>

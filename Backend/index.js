@@ -18,12 +18,11 @@ app.use(cookieparser());
 // CORS middleware must come BEFORE routes
 const allowedOrigins = process.env.CLIENT_URL 
     ? process.env.CLIENT_URL.split(',')
-    : ["http://localhost:5173", "https://crime-master.onrender.com", "https://crime-record-management-4.onrender.com"];
+    : ["http://localhost:5173", "https://crime-master.onrender.com"];
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 app.use(cors({
-<<<<<<< HEAD
     origin: function (origin, callback) {
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
@@ -37,9 +36,7 @@ app.use(cors({
             callback(new Error('Not allowed by CORS'));
         }
     },
-=======
     origin: "https://crime-master.onrender.com",
->>>>>>> main
     credentials: true
 }));
 
